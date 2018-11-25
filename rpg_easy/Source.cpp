@@ -8,10 +8,6 @@ namespace System {
 	bool Update() { return (ScreenFlip() != -1 && ClearDrawScreen() != -1 && ProcessMessage() != -1); }
 }
 
-//void drawMap(const int32_t i_, const int32_t j_, const int32_t sx_, const int32_t sy_, const int32_t ex_, const int32_t ey_, const std::vector<std::vector<int>>& col_) {
-//	DrawBox(sx_, sy_, ex_ + sx_, ey_ + sy_, ((col_[i_][j_] == 1) ? 0xbbbbbbbb : 0x00000000), 1);
-//}
-
 void drawMap(const int32_t i_, const int32_t j_, const int32_t sx_, const int32_t sy_, const int32_t ex_, const int32_t ey_, const std::vector<std::vector<int>>& col_) {
 	int color;
 	switch (col_[i_][j_])
@@ -112,25 +108,3 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	return DxLib_End();
 }
-
-//for (size_t i = 0; i < col.data.size(); ++i)
-//	for (size_t j = 0; j < col.data[i].size(); ++j) {
-//		col.data[i][j].r = game::gameRand(50, 206);
-//		col.data[i][j].g = game::gameRand(50, 206);
-//		col.data[i][j].b = game::gameRand(50, 206);
-//	}
-
-//struct rgb {
-//	int32_t r;
-//	int32_t g;
-//	int32_t b;
-//};
-
-//void draww(const int32_t i_, const int32_t j_, const int32_t sx_, const int32_t sy_, const int32_t ex_, const int32_t ey_, const std::vector<std::vector<rgb>>& col_,const int& is_) {
-//	//DrawBox(sx_, sy_, ex_ + sx_, ey_ + sy_, GetColor(col_[j_][i_].r, col_[j_][i_].g, col_[j_][i_].b), is_);
-//	DrawBox(sx_, sy_, ex_ + sx_, ey_ + sy_, GetColor(col_[j_][i_].r, col_[j_][i_].g, col_[j_][i_].b), is_);
-//}
-
-
-
-
